@@ -43,27 +43,27 @@
 </div>
 <script>
 const button = document.getElementById('tip');
-var mult = .16;
+var mult = 0.16;
   button.addEventListener('click', function() {
     if (button.textContent === "16%") {
       button.textContent = "18%";
-	mult = .18;
+	mult = 0.18;
     } 
     else if (button.textContent === "18%") {
       button.textContent = "20%";
-	mult = .2;
+	mult = 0.2;
     }
     else if (button.textContent === "20%") {
       button.textContent = "22%";
-	    mult = .22;
+	    mult = 0.22;
     }
     else if (button.textContent === "22%") {
       button.textContent = "15%";
-	    mult = .15;
+	    mult = 0.15;
     }
     else if (button.textContent === "15%") {
       button.textContent = "16%";
-	    mult = .16;
+	    mult = 0.16;
     }
   });
 const searchInput = document.getElementById('search');
