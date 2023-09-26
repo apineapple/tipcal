@@ -78,7 +78,7 @@ const searchInput = document.getElementById('search');
         const tipnum = Math.floor(number+addnum);
         const tens = Math.floor((Math.abs(tipnum) / 10) % 10);
         const ones = Math.floor(Math.abs(tipnum) % 10);
-        alert("$" + number +" + $"+ addnum +"."+ones.toString()+tens.toString()+" = $"+tipnum+"."+ones.toString()+tens.toString());
+        alert("$" + number +" + $"+ addnum +"."+ones.toString()+tens.toString()+"("+button.textContent+") = $"+tipnum+"."+ones.toString()+tens.toString());
       } else {
         alert('Invalid input. Please enter a valid integer.');
       }
