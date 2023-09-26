@@ -43,11 +43,26 @@
 </div>
 <script>
 const button = document.getElementById('tip');
+const mult = .16;
   button.addEventListener('click', function() {
     if (button.textContent === "16%") {
+      button.textContent = "18%";
+    } 
+    else if (button.textContent === "18%") {
       button.textContent = "20%";
-    } else {
+	mult = .2;
+    }
+    else if (button.textContent === "20%") {
+      button.textContent = "22%";
+	    mult = .22;
+    }
+    else if (button.textContent === "22%") {
+      button.textContent = "15%";
+	    mult = .15;
+    }
+    else if (button.textContent === "15%") {
       button.textContent = "16%";
+	    mult = .16;
     }
   });
 const searchInput = document.getElementById('search');
@@ -58,7 +73,7 @@ const searchInput = document.getElementById('search');
       // Check if the input is a valid integer
       if (/^-?\d*\.?\d+$/.test(inputValue)) {
         const number = parseFloat(inputValue);
-	const addnum = Math.floor(.16*number);
+	const addnum = Math.floor(mult*number);
         const tipnum = Math.floor(number+addnum);
         const tens = Math.floor((Math.abs(tipnum) / 10) % 10);
         const ones = Math.floor(Math.abs(tipnum) % 10);
